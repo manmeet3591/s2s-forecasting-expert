@@ -1,34 +1,46 @@
-# 🌍 S2S Forecasting Expert
+# 🌎 S2S Model Builder
 
-Expert advisory skill for AI-based Subseasonal-to-Seasonal (S2S) forecasting systems including:
+An end-to-end builder skill for AI-based Subseasonal-to-Seasonal (S2S) forecasting systems.
 
-- FuXi
-- FengWu
-- AIFS
-- CRPS-based probabilistic modeling
+Generates runnable PyTorch code for:
+
+- FuXi-style transformers
+- FengWu-style Earth models
+- AIFS-inspired probabilistic systems
+- CRPS-based training
+- Multi-lead-time forecasting
 
 ---
 
-## What This Skill Provides
+## What This Skill Does
 
-- Architecture design guidance
-- ERA5 training strategies
-- Probabilistic forecasting techniques
-- CRPS evaluation implementation
-- Deployment optimization advice
+- Scaffolds full model architectures
+- Generates training loops
+- Implements CRPS
+- Creates evaluation pipelines
+- Designs distributed training setups
 
-This is an advisory-only skill. It does not fetch external data or execute APIs.
+This skill generates transparent, local code only. No external APIs are called.
+
+---
+
+## Intended Users
+
+- Climate AI researchers
+- Earth system ML engineers
+- Research labs building S2S systems
+- Advanced ML practitioners
 
 ---
 
 ## Installation
 
-Upload the folder containing:
+Upload:
 
 SKILL.md  
 README.md  
 
-to ClawHub using the Publish Skill page.
+to ClawHub via Publish Skill.
 
 ---
 
