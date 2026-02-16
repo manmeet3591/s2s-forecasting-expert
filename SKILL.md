@@ -1,114 +1,49 @@
----
-name: s2s-forecasting-expert
-description: Expert guidance for AI-based Subseasonal-to-Seasonal (S2S) forecasting systems including FuXi, FengWu, and AIFS with CRPS-based probabilistic verification.
-metadata:
-  clawdbot:
-    emoji: "🌍"
-    requires:
-      env: []
-    files: []
----
+# 🌎 S2S Model Builder
 
-# Subseasonal-to-Seasonal (S2S) Forecasting Expert
+An end-to-end builder skill for AI-based Subseasonal-to-Seasonal (S2S) forecasting systems.
 
-An expert advisory skill specializing in AI-driven **Subseasonal-to-Seasonal (2–60 day and seasonal-scale) forecasting systems**, including:
+Generates runnable PyTorch code for:
 
-- FuXi S2S
-- FengWu
-- AIFS (AI Forecasting System)
-- CRPS-based probabilistic models
-- Transformer-based global weather models
-
-This skill provides architectural, training, evaluation, and deployment guidance for modern AI weather systems.
+- FuXi-style transformers
+- FengWu-style Earth models
+- AIFS-inspired probabilistic systems
+- CRPS-based training
+- Multi-lead-time forecasting
 
 ---
 
-## Capabilities
+## What This Skill Does
 
-### Architecture Design
-- Spatiotemporal transformers for global grids
-- Multi-variable atmospheric modeling (Z500, T2M, winds, SST)
-- Multi-lead-time output heads
-- Ensemble neural forecasting
-- Graph-based atmospheric representations
+- Scaffolds full model architectures
+- Generates training loops
+- Implements CRPS
+- Creates evaluation pipelines
+- Designs distributed training setups
 
-### Training Pipelines
-- ERA5-based training workflows
-- Hindcast dataset construction
-- Rolling lead-time supervision
-- Seasonal embeddings
-- Atmospheric variable normalization
-
-### Probabilistic Forecasting
-- CRPS loss implementation
-- Quantile regression outputs
-- Ensemble spread calibration
-- Reliability diagram interpretation
-
-### Evaluation & Verification
-- Continuous Ranked Probability Score (CRPS)
-- Anomaly Correlation Coefficient (ACC)
-- RMSE across lead times
-- Skill vs climatology benchmarks
-- Extreme event scoring (Brier score)
-
-### Deployment & Optimization
-- Multi-GPU training (FSDP / ZeRO)
-- Mixed precision (bfloat16)
-- Memory-efficient inference
-- Operational forecast pipelines
+This skill generates transparent, local code only. No external APIs are called.
 
 ---
 
-## Example Prompts
+## Intended Users
 
-- “Design a FuXi-style transformer for 30-day Z500 forecasts.”
-- “Implement CRPS loss for probabilistic S2S outputs.”
-- “Compare FengWu and AIFS architectures.”
-- “Optimize 45-day global forecast inference.”
-
----
-
-# External Endpoints
-
-This skill does not call any external APIs.
-
-| Endpoint | Purpose | Data Sent |
-|----------|---------|-----------|
-| None     | N/A     | None      |
+- Climate AI researchers
+- Earth system ML engineers
+- Research labs building S2S systems
+- Advanced ML practitioners
 
 ---
 
-# Security & Privacy
+## Installation
 
-- No external API calls
-- No environment variables required
-- No local file access
-- No data leaves the system
-- Advisory-only functionality
+Upload:
 
----
+SKILL.md  
+README.md  
 
-# Model Invocation Note
-
-This skill may be automatically invoked when queries relate to:
-
-- Subseasonal-to-Seasonal forecasting
-- FuXi, FengWu, or AIFS
-- CRPS evaluation
-- AI-based weather modeling
-
-Users may opt out by disabling the skill.
+to ClawHub via Publish Skill.
 
 ---
 
-# Trust Statement
+## Version
 
-By using this skill, you acknowledge that it provides advisory guidance for AI-based climate and weather forecasting systems. No data is transmitted externally.
-
----
-
-# Version
-
-v1.0.0  
-Last updated: Feb 16, 2026
+1.0.0
